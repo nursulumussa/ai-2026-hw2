@@ -1,0 +1,116 @@
+{
+  "A": {
+    "tokens": [
+      62,
+      122,
+      207,
+      302,
+      398,
+      506,
+      625,
+      735,
+      835,
+      943,
+      1103
+    ],
+    "peak": 1103,
+    "total": 5838,
+    "probes": [
+      {
+        "id": "Q-1",
+        "retrieved": true,
+        "answer": "You are **Daniyar Qoshan**, applicant **A-202**."
+      },
+      {
+        "id": "Q-2",
+        "retrieved": true,
+        "answer": "The **ID card** is the document still noted as missing. You said you plan to bring it to the office on Thursday, but receipt and verification are not yet confirmed."
+      },
+      {
+        "id": "Q-3",
+        "retrieved": false,
+        "answer": "You **reported income band 2** based on your family’s certificate, but it has **not been verified or officially confirmed**.\n\nThe grant amount cannot be determined yet because the applicable award table and your eligibility decision are still unconfirmed."
+      },
+      {
+        "id": "Q-4",
+        "retrieved": true,
+        "answer": "You said you can come to the office on **Thursdays**. Office hours and appointment availability are not confirmed, so please check with the grant office before visiting."
+      },
+      {
+        "id": "Q-5",
+        "retrieved": true,
+        "answer": "You asked whether a **scanned letter from your employer** would be accepted or whether you must submit the **original**. I said this depends on the grant’s document rules, and advised you to check with the office; if submitting a scan, keep the original."
+      }
+    ],
+    "state": null
+  },
+  "B": {
+    "tokens": [
+      62,
+      131,
+      233,
+      334,
+      420,
+      558,
+      665,
+      782,
+      882,
+      306,
+      456
+    ],
+    "peak": 882,
+    "total": 4829,
+    "probes": [
+      {
+        "id": "Q-1",
+        "retrieved": true,
+        "answer": "You are **Daniyar Qoshan**, applicant **A-202**."
+      },
+      {
+        "id": "Q-2",
+        "retrieved": true,
+        "answer": "Your **ID card copy or scan** is still missing from your file."
+      },
+      {
+        "id": "Q-3",
+        "retrieved": false,
+        "answer": "Your family certificate lists you in **income band 2**. However, no grant amount has been confirmed or recorded, so I can’t state what that band would pay without the official grant scale or an eligibility decision."
+      },
+      {
+        "id": "Q-4",
+        "retrieved": true,
+        "answer": "You can come to the office on **Thursdays**."
+      },
+      {
+        "id": "Q-5",
+        "retrieved": true,
+        "answer": "You asked whether a **scanned letter from your employer would be accepted**, or whether the **original letter is required**."
+      }
+    ],
+    "state": {
+      "applicant_id": "A-202",
+      "topic": "Study grant application eligibility, document submission, award amount, and family application records",
+      "facts": [
+        "The applicant's name is Daniyar Qoshan.",
+        "The applicant sent their transcript last week.",
+        "The applicant's income band is 2 according to their family's certificate.",
+        "The applicant could not upload their ID card because the scanner at home broke.",
+        "The applicant's sister Aruzhan applied last year and is on file."
+      ],
+      "decisions": [],
+      "constraints": [
+        "The applicant can only come to the office on Thursdays.",
+        "The applicant has lab all week otherwise.",
+        "The applicant cannot currently scan the ID card at home because the scanner is broken."
+      ],
+      "open_questions": [
+        "Does a scanned letter from the applicant's employer count, or is the original required?",
+        "If the applicant brings the ID card on Thursday, will the decision be made the same day?",
+        "Does the applicant qualify for the study grant?",
+        "How much would the grant amount be if approved?",
+        "Does Aruzhan's previous application affect application A-202?"
+      ],
+      "language": "English with some Kazakh"
+    }
+  }
+}
