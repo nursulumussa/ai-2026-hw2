@@ -2,7 +2,7 @@ HW2 submission
 Name: Musa Nursulu
 Student ID: S23067665
 Group: 9
-Repository: https://github.com/nursulumussa/ai-2026-hw2.git
+Repository: https://github.com/nursulumussa/ai-2026-hw2
 AI tool disclosure
 I used ChatGPT (OpenAI) to help draft the Python scripts for all three sublabs, set up the environment, troubleshoot API errors, and organize this submission. In Easy, AI helped draft the four role prompts (policy_officer, front_desk, auditor, and bilingual_clerk). I ran the scripts with my OpenAI API key and reported the observed results, rather than inventing outputs. I reviewed the written analysis based on those runs. The model used by the scripts should be verified in the MODEL constants before submission.
 Sublab Easy — one task, four roles
@@ -34,9 +34,23 @@ missing_documents	none	none
 
 Raw replies
 Full JSON reply for E-02 from front_desk, where the decision differs from the policy officer:
-[PASTE EXACT CONTENT OF easy_results.json -> front_desk -> E-02 -> raw HERE]
+{
+  "applicant_id": "A-202",
+  "found": true,
+  "decision": "more_info",
+  "amount": 0,
+  "missing_documents": ["id_card"],
+  "reason": "Daniyar Qoshan meets the GPA and income-band requirements, but the id card is not on file. Please provide the id card to complete the application."
+}
 Full JSON reply for E-07 from bilingual_clerk (retain the Kazakh-language reason):
-[PASTE EXACT CONTENT OF easy_results.json -> bilingual_clerk -> E-07 -> raw HERE]
+{
+  "applicant_id": "A-201",
+  "found": true,
+  "decision": "granted",
+  "amount": 250000,
+  "missing_documents": [],
+  "reason": "Сіз грантқа өтініш беруге құқылысыз: GPA көрсеткіші 3.4, табыс санатыңыз 1 және транскрипт пен жеке куәлік құжаттары тіркелген. Грант мөлшері — 250 000 теңге."
+}
 Written answers
 1. Which fields are role-sensitive and which are not?
 decision is most role-sensitive: nine enquiries show at least one difference from the policy officer. amount also changed once (E-07 under auditor). found and missing_documents did not change in any comparison. This suggests that role wording affected decisions more than factual retrieval.
@@ -180,10 +194,3 @@ In story-06 the GPA appears as 3.2 and then 3.5, with no reliable grading scale.
 The winner scored 4.40 and the next-ranked candidates scored 3.60 (a tie between story-04 and story-05). The gap is 0.80, not within 0.05. I would still check the source evidence and rubric calculations before making a final decision. If the candidates had been within 0.05, I would recommend manual review and extraction that records precise citations and verification status for each scored fact.
 Reflection (optional, one short paragraph)
 Next time I build an application using structured model output, I will define the JSON schema first, validate each answer in code, and separate model extraction from deterministic policy decisions. I will keep source evidence and uncertainty visible instead of allowing the model to fill in missing facts. For long conversations, I will use structured compression only when the original messages remain available for auditing.
-Before submitting — complete these checks
-- Replace the four personal/repository placeholders at the top.
-- Insert the two actual Easy raw JSON replies, including reason, from easy_results.json.
-- Check the required call count: the provided Medium run had 11 calls, while this template has 12 rows. Follow the instructor's exact requirements if 12 are mandatory.
-- Review the extracted fields against data/cv_stories and the grading rubric, especially ambiguous papers, GPA conversion, and contradictory details.
-- Confirm .env and API keys are excluded from Git (.gitignore).
-- If you copied AI-written answers, read them and adjust to reflect what you understand and actually did.
